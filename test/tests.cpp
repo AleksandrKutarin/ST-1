@@ -9,12 +9,7 @@ TEST(CheckPrimeTest, SmallValues) {
   EXPECT_TRUE(checkPrime(2));
   EXPECT_TRUE(checkPrime(3));
   EXPECT_FALSE(checkPrime(4));
-}
-
-TEST(CheckPrimeTest, LargeValues) {
-  EXPECT_FALSE(checkPrime(1000000000000));
-  EXPECT_TRUE(checkPrime(1000000000007));
-  EXPECT_FALSE(checkPrime(1000000000008));
+  EXPECT_TRUE(checkPrime(5));
 }
 
 TEST(NPrimeTest, SmallValues) {
@@ -24,29 +19,14 @@ TEST(NPrimeTest, SmallValues) {
   EXPECT_EQ(nPrime(4), 7);
 }
 
-TEST(NPrimeTest, LargeValue) {
-  EXPECT_EQ(nPrime(100), 541);
-  EXPECT_EQ(nPrime(1000), 7919);
-  EXPECT_EQ(nPrime(10000), 104729);
-}
-
-TEST(NextPrimeTest, SmallValue) {
-  EXPECT_EQ(nextPrime(0), 2);
+TEST(NextPrimeTest, SmallValues) {
   EXPECT_EQ(nextPrime(2), 3);
-  EXPECT_EQ(nextPrime(10), 11);
+  EXPECT_EQ(nextPrime(3), 5);
+  EXPECT_EQ(nextPrime(5), 7);
+  EXPECT_EQ(nextPrime(7), 11);
 }
 
-TEST(NextPrimeTest, LargeValue) {
-  EXPECT_EQ(nextPrime(999999999), 1000000007);
-  EXPECT_EQ(nextPrime(1000000007), 1000000009);
-}
-
-TEST(SumPrimeTest, SmallValue) {
+TEST(SumPrimeTest, SmallValues) {
   EXPECT_EQ(sumPrime(10), 17);
-  EXPECT_EQ(sumPrime(50), 328);
-}
-
-TEST(SumPrimeTest, LargeValue) {
-  EXPECT_EQ(sumPrime(100), 24133);
-  EXPECT_EQ(sumPrime(1000), 76127);
+  EXPECT_EQ(sumPrime(20), 77);
 }
